@@ -21,8 +21,8 @@ This is an example of the tandem of [**PyTorch**](https://pytorch.org/), [**Djan
 This application was written as a practice.All you have to do is upload a chest x-ray, and then you will get a Grad-cam and prediction with probabilities.<br>
 If you are interested in creating any interface for other people to interact with your ML-models, then this repository can be an example and starting point for this.
 
-## About Bot's prediction models
-**Blindness detection :**
+## About prediction model
+
 + This is Resnet18, trained on a dataset on [**NIH Chest X-ray Datasetfrom**](https://www.kaggle.com/nih-chest-xrays/data)
 The predictive model of the service has a minimal configuration due to the limitations of the Heroku free server. <br>
 
