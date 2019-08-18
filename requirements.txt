@@ -1,0 +1,17 @@
+django_heroku
+whitenoise
+cycler==0.10.0
+Django==2.2.4
+django-crispy-forms==1.7.2
+gunicorn==19.9.0
+kiwisolver==1.1.0
+matplotlib==3.1.1
+numpy==1.17.0
+Pillow==6.1.0
+pyparsing==2.4.2
+python-dateutil==2.8.0
+pytz==2019.2
+six==1.12.0
+sqlparse==0.3.0
+https://download.pytorch.org/whl/cpu/torch-1.2.0%2Bcpu-cp36-cp36m-manylinux1_x86_64.whl
+https://download.pytorch.org/whl/cu100/torchvision-0.4.0-cp36-cp36m-manylinux1_x86_64.whl

@@ -1,0 +1,68 @@
+{% extends "service/base_service.html" %}
+
+{% block content %}
+{% csrf_token %}
+{% load static %}
+<title>CheXNet Prediction | Med Rad Industries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="mt-4 mb-sm-0">
+<center>
+<h2>
+    <p class"font-weight-bold" style="color: black;"><strong>Grad-CAM</strong></p>
+</h2>
+<h6 >
+  <p style="color: black;">Visual explanations from our neural network using gradient localization</p>
+</h6>
+</center>
+</div>
+
+
+  <center>
+  <div class="container mb-5 mt-4">
+  <img id="image" class="img-fluid rounded" src="data:image/png;base64,{{ heatmap }}" width="700" height="700">
+  </div>
+  </center>
+
+<center>
+<h2 >
+    <strong><p style="color: black;">Predicted diagnosis with probabilities</p></strong>
+</h2>
+</center>
+
+<center>
+    <h5>
+    <p class="font-weight-bold mt-3 mb-3" style="color:black;"> Pathogenesis of <a style="color:#00fbae;">"{{ diagnosis }}"</a> with a <a style="color:#00fbae;">{{ probability }}</a> probability</p>
+    </h5>  
+ <div class="col-md-4 mt-3 justify-content-center">
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Diagnosis</th>
+      <th scope="col">Probability</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for x, y in proba %}
+    <tr>
+      <td>{{ x }}:</td>
+      <td>{{ y }}</td>
+    </tr>
+  </tbody>
+    {% endfor %}
+</table>
+ </div>
+</center>
+
+<p>
+  <h1 style="margin:50px"></h1>
+</p>
+
+
+{% endblock %}
+
+
+
+
+
+

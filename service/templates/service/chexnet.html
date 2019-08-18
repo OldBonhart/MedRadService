@@ -1,0 +1,30 @@
+{% extends "service/base_service.html" %}
+{% load static %}
+{% block content %}
+<title>CheXNet | Med Rad Industries</title>
+<h1 class="mt-4 mb-5 text-center font-weight-bold">Upload your Chest <a style="color: #00FFB3;"> X-Ray</a> below</h1>
+
+       <div class="card mt-4 mb-4">
+      <img src="{% static "images/xray.png" %}" style="width:100%">
+       </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-4">
+        <div class="card text-white  mt-2 mb-5" style="background-color: #272727;">
+          <div class="card-body">
+              <form action="prediction" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <input type="file" name="image">
+              <button  type="submit">Upload file</button>
+               </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<p>
+  <h1 style="margin:50px"></h1>
+</p>
+{% endblock content %}

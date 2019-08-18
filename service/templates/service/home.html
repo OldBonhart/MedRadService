@@ -1,0 +1,43 @@
+{% extends "service/base_service.html" %}
+{% load static %}
+{% block content %}
+<title>Home | Med Rad Industries</title>
+<div class="mt-4 mb-2">
+<center>
+<h3 >
+    <p class="font-weight-bold" style="color: black;">Welcome to the <a style="color: #00FFF1;">Med Rad Industries</a> {% if user.is_authenticated %}{{ user.username }}{% else %}Visitor{% endif %}!</p>
+</h3>
+    <h5 class="font-weight-bold"  style="color: black;">Here you can repel the tyranny of biology</h5>
+</center>
+</div>
+                                                                                                   
+ <center>
+<div class="container mb-5 mt-5">
+  <img src="{% static "images/out.gif" %}" class="img-fluid rounded" alt="My image" class="float-center"  width="700" height="700">
+</div>
+</center>                                                                                                     
+
+
+
+<center>
+<container style="color: #000000;"><h5>With Artificial intelligence (AI) has the potential to revolutionize disease diagnosis and management by performing classification difficult for human experts and by rapidly reviewing immense amounts of images.</p>
+
+<p>Pneumonia accounts for a significant proportion of
+patient morbidity and mortality. Early diagnosis and treatment of pneumonia is critical to preventing complications including
+death.With approximately 2 billion procedures per year, chest X-rays are the most common imaging examination tool used in practice, critical for screening, diagnosis, and management of diseases including pneumonia. However, an estimated two thirds of the global population lacks access to radiology diagnostics. With automation at the level of experts, we hope that this technology can improve healthcare delivery and increase access to medical imaging expertise in parts of the world where access to skilled radiologists is limited.</h5>
+<p>
+  <h1 style="margin:30px"></h1>
+</p>
+                                  
+      <div class="container">
+{% if user.is_authenticated %}<a href="{% url 'chexnet' %}" class="btn btn-dark btn-lg" style="background-color: #272727;">Try for free</a>{% else %}<a href="{% url 'register' %}" class="btn btn-dark btn-lg" style="background-color: #272727;">Try for free</a>{% endif %}
+      </div>
+</container></center>
+</div>
+
+<p>
+  <h1 style="margin:50px"></h1>
+</p>
+
+
+{% endblock %}

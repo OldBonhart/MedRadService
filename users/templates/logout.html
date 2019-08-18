@@ -1,0 +1,10 @@
+{% extends "base_auth.html" %}
+{% block content %}
+<title>Log out | Med Rad Industries</title>
+    <h2>Log out</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Log out</button>
+    </form>
+{% endblock %}}
